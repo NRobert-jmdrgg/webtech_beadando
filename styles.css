@@ -2,3 +2,27 @@ body {
   font-family: 'Roboto', 'Ubuntu', 'Monospace', 'Cursive', 'Fantasy', 'Serif',
     'Sans-serif';
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  height: 50px;
+  padding-right: 10px;
+}
+
+.navbar-center span {
+  padding: 10px;
+}
+
+#dark-mode-switcher {
+  height: 35px;
+}

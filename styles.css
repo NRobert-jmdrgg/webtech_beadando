@@ -3,12 +3,19 @@
   --navbar-color: hsl(220, 22%, 92%);
   --main-text-color: hsl(234, 16%, 35%);
   --main-border-color: hsl(233, 13%, 41%);
+  --main-highlight-color: hsl(231, 97%, 72%);
 }
 
 body {
   font-family: 'Roboto', 'Ubuntu', 'Monospace', 'Cursive', 'Fantasy', 'Serif',
     'Sans-serif';
   background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
   color: var(--main-text-color);
 }
 
@@ -22,6 +29,12 @@ body {
 
 .navbar-center span {
   border: 1px solid var(--main-border-color);
+}
+
+.navbar-center span:hover,
+.navbar-left:hover,
+.list div:hover {
+  background-color: var(--main-highlight-color);
 }
 
 .navbar-left,
@@ -89,5 +102,11 @@ body {
 }
 
 .footer {
-  background-color: brown;
+  margin-top: 100px;
+  display: flex;
+  border-top: 1px solid var(--main-border-color);
+}
+
+.footer td {
+  padding: 10px;
 }

@@ -20,25 +20,24 @@ $('.dark-mode-switcher-container').click(() => {
   }
 });
 
-fetch('https://baconipsum.com/api/?type=all-meat&paras=15&start-with-lorem=1')
-  .then((response) => response.json())
-  .then((data) => {
-    data.forEach((sentence, i) => {
-      before = i % 2 === 0;
-      const id = `#bi${i}`;
-      const img =
-        '<img src="" alt="dog image" style="width: 100px; height: 100px;"></img>';
-      $('.list').append(
-        `<div class='bacon-ipsum' id='bi${i}'><span>${sentence}</span></div>`
-      );
+$('.dropdown').hover(
+  function () {
+    $(this).show();
+  },
+  function () {
+    $(this).hide();
+  }
+);
 
-      before ? $(id).prepend(img) : $(id).append(img);
-      fetch('https://dog.ceo/api/breeds/image/random')
-        .then((response) => response.json())
-        .then((data) => {
-          $(id).children('img').attr('src', `${data.message}`);
-        })
-        .catch((error) => console.error(error));
-    });
-  })
-  .catch((error) => console.error(error));
+$('.navbar-toggle').hover(
+  function () {
+    const id = $(this).attr('id');
+    $('.dropdown').not(`#${id}`).hide();
+
+    $(`#${id}.dropdown`).show();
+  },
+  function () {
+    const id = $(this).attr('id');
+    $(`#${id}.dropdown`).hide();
+  }
+);

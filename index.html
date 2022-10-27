@@ -14,6 +14,20 @@
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 
   <script src="./jquery-3.6.1.min.js" type="text/javascript"></script>
+  <style>
+    .ingredients,
+    .instructions {
+      display: flex;
+      padding: 10px;
+    }
+
+    .ingredients img {
+      margin-left: auto;
+      margin-right: 3cm;
+      border-radius: 25px;
+      height: 300px;
+    }
+  </style>
 </head>
 
 <body>
@@ -25,17 +39,83 @@
       </div>
     </a>
     <div class='navbar-center'>
-      <span>menu 1</span>
-      <span>menu 2</span>
-      <span>menu 3</span>
-      <span>menu 4</span>
+      <div class='navbar-item'>
+        <span class='navbar-toggle' id='1'>menu 1</span>
+        <ol class='dropdown' id='1'>
+          <li><a href=''>menu item 1</a></li>
+          <li><a href=''>menu item 2</a></li>
+          <li><a href=''>menu item 3</a></li>
+          <li><a href=''>menu item 4</a></li>
+        </ol>
+      </div>
+
+      <div class='navbar-item'>
+        <span class='navbar-toggle' id='2'>menu 2</span>
+        <ol class='dropdown' id='2'>
+          <li><a href=''>menu item 1</a></li>
+          <li><a href=''>menu item 2</a></li>
+          <li><a href=''>menu item 3</a></li>
+          <li><a href=''>menu item 4</a></li>
+        </ol>
+      </div>
+      <div class='navbar-item'>
+        <span class='navbar-toggle' id='3'>menu 3</span>
+        <ol class='dropdown' id='3'>
+          <li><a href=''>menu item 1</a></li>
+          <li><a href=''>menu item 2</a></li>
+          <li><a href=''>menu item 3</a></li>
+          <li><a href=''>menu item 4</a></li>
+        </ol>
+      </div>
+
+      <div class='navbar-item'>
+        <span class='navbar-toggle' id='4'>menu 4</span>
+        <ol class='dropdown' id='4'>
+          <li><a href=''>menu item 1</a></li>
+          <li><a href=''>menu item 2</a></li>
+          <li><a href=''>menu item 3</a></li>
+          <li><a href=''>menu item 4</a></li>
+        </ol>
+      </div>
     </div>
+
     <div class='dark-mode-switcher-container'>
       <img id='dark-mode-switcher' src='./resources/light_mode.png' alt='téma választó' />
     </div>
   </div>
 
-  <div class='list'></div>
+  <div class='recipe'>
+    <h1>Amerikai palacsinta (pancake)</h1>
+    <div class='ingredients'>
+      <p>Hozzávalók:</p>
+      <ul>
+        <li>225 g finomliszt</li>
+        <li>1 db tojás</li>
+        <li>3 dl tej</li>
+        <li>1 csomag sütőpor</li>
+        <li>3 ek cukor</li>
+        <li>1 csomag vaníliás cukor</li>
+        <li>1 késhegynyi fahéj</li>
+        <li>1 ek napraforgó olaj</li>
+      </ul>
+      <img src="./resources/pancake.jpg" alt="package">
+    </div>
+    <div class='instructions'>
+
+      <p>Elkészítés:</p>
+
+      <ol>
+        <li>Az összes hozzávalót beletesszük a turmixba, és alaposan összemixeljük. Érdemes 2 részletben hozzáadni a
+          tejet
+          és a lisztet, így egyszerűbb, hatékonyabb.</li>
+        <li>Felforrósítunk és beolajozunk egy teflon serpenyőt. A tésztakeverékből 2-3 korongot csorgatunk bele. A
+          turmix
+          kiöntője segítségével egyszerű adagolni. Aranybarnára sütjük mindkét oldalát.</li>
+        <li>Ízlés szerint fogyaszthatjuk mézzel, mogyorókrémmel, olvasztott csokival, lekvárral, juharsziruppal.</li>
+      </ol>
+    </div>
+    <p class='ido'>Sütés ideje: 2 perc</p>
+  </div>
   <div class='footer'>
     <table style='padding-top: 10px; padding-bottom: 10px; padding-left: 2cm;'>
 
@@ -52,10 +132,9 @@
 
     </table>
     <p style='margin-left: auto; padding-top: 10px; padding-bottom: 10px; padding-right: 2cm;'>
-      Made in Miskolc 👨🏾🔪
+      Made in Miskolc 🔪
     </p>
   </div>
-
 
   <script type="text/javascript" src="./index.js"></script>
 </body>

@@ -22,7 +22,7 @@ a {
 .navbar-center,
 .navbar-left,
 #dark-mode-switcher,
-.list,
+.feed,
 .bacon-ipsum {
   border: 1px solid var(--main-border-color);
 }
@@ -32,8 +32,7 @@ a {
 }
 
 .navbar-center span:hover,
-.navbar-left:hover,
-.list div:hover {
+.navbar-left:hover {
   background-color: var(--main-highlight-color);
 }
 
@@ -45,9 +44,20 @@ a {
 .navbar {
   margin: 15px;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: space-around;
   align-items: center;
+}
+
+.dropdown {
+  background-color: var(--navbar-color);
+  border: solid 1px var(--main-border-color);
+  position: absolute;
+  display: none;
+}
+
+.dropdown li {
+  font-size: 14;
 }
 
 .navbar-left {
@@ -63,10 +73,14 @@ a {
   padding-right: 10px;
 }
 .navbar-center {
+  display: flex;
   padding: 15px;
   border-radius: 30cm;
 }
 
+.navbar-item {
+  position: relative;
+}
 .navbar-center span {
   margin: 10px;
   padding: 10px;
@@ -78,27 +92,31 @@ a {
   border-radius: 100%;
 }
 
-.list {
-  margin: 15px;
-  padding: 10px;
-  border-radius: 25px;
+.recipe {
+  margin-left: 2cm;
+  margin-right: 2cm;
 }
 
-.bacon-ipsum {
-  display: flex;
-  margin: 15px;
-  padding: 10px;
-  border-radius: 25px;
+.ingredients img {
+  border: solid 1px var(--main-border-color);
 }
 
-.bacon-ipsum span {
-  padding: 10px;
+h1,
+.ido {
+  margin-left: 3cm;
 }
 
-.bacon-ipsum img {
-  border: 1px solid var(--main-border-color);
+.recipe li {
+  font-size: 24px;
+}
+
+.recipe div {
+  margin-top: 1cm;
+  margin-bottom: 1cm;
+  padding: 1cm;
   border-radius: 25px;
-  margin: 10px;
+  border: solid 1px var(--main-border-color);
+  background-color: var(--navbar-color);
 }
 
 .footer {

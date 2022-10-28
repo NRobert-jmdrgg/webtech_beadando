@@ -1,0 +1,8 @@
+@import url(styles.css);
+
+.text-container,
+.form-container {
+  margin: 1cm;
+  padding: 1rem 10px;
+  background-color: var(--secondary-bg-color);
+}

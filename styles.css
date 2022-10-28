@@ -1,6 +1,7 @@
+/* szinek: github.com/catppuccin */
 :root {
   --main-bg-color: hsl(220, 21%, 89%);
-  --navbar-color: hsl(220, 22%, 92%);
+  --secondary-bg-color: hsl(220, 22%, 92%);
   --main-text-color: hsl(234, 16%, 35%);
   --main-border-color: hsl(233, 13%, 41%);
   --main-highlight-color: hsl(231, 97%, 72%);
@@ -21,9 +22,7 @@ a {
 
 .navbar-center,
 .navbar-left,
-#dark-mode-switcher,
-.feed,
-.bacon-ipsum {
+#dark-mode-switcher {
   border: 1px solid var(--main-border-color);
 }
 
@@ -32,13 +31,15 @@ a {
 }
 
 .navbar-center span:hover,
-.navbar-left:hover {
+.navbar-left:hover,
+#dark-mode-switcher:hover,
+.dropdown :hover {
   background-color: var(--main-highlight-color);
 }
 
 .navbar-left,
 .navbar-center {
-  background-color: var(--navbar-color);
+  background-color: var(--secondary-bg-color);
 }
 
 .navbar {
@@ -49,15 +50,37 @@ a {
   align-items: center;
 }
 
-.dropdown {
-  background-color: var(--navbar-color);
-  border: solid 1px var(--main-border-color);
-  position: absolute;
+ol.dropdown {
   display: none;
+  position: absolute;
+  top: 100%;
+  margin-top: 0px;
+  padding: 0;
+  background: var(--secondary-bg-color);
+  border: 1px solid var(--main-border-color);
+  border-radius: 25px;
+  text-align: center;
 }
 
-.dropdown li {
-  font-size: 14;
+ol.dropdown li {
+  background: var(--secondary-bg-color);
+  list-style-type: none;
+  padding: 10px;
+}
+
+ol.dropdown li:first-child {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+ol.dropdown li:last-child {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+ol.dropdown li a {
+  text-decoration: none;
+  display: block;
 }
 
 .navbar-left {
@@ -79,7 +102,10 @@ a {
 }
 
 .navbar-item {
+  user-select: none;
   position: relative;
+  text-align: center;
+  box-sizing: border-box;
 }
 .navbar-center span {
   margin: 10px;
@@ -116,7 +142,7 @@ h1,
   padding: 1cm;
   border-radius: 25px;
   border: solid 1px var(--main-border-color);
-  background-color: var(--navbar-color);
+  background-color: var(--secondary-bg-color);
 }
 
 .footer {

@@ -68,7 +68,8 @@ select {
 }
 
 input[type='date'],
-input[type='color'] {
+input[type='color'],
+textarea {
   padding: 0 1rem;
   font-size: 24px;
   margin: 1rem 0;

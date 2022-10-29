@@ -19,6 +19,7 @@
   <script src='./setTheme.js'></script>
   <script type="text/javascript" src="./index.js" defer></script>
   <script type='text/javascript' src='bacon-ipsum.js'></script>
+  <script type='text/javascript' src='form.js' defer></script>
 </head>
 
 <body>
@@ -83,10 +84,14 @@
 
   <div class='form-container'>
     <form>
-      <label for='fname'>Név</label> <br>
-      <input type='text' id='name' name='fname' class='form-field'> <br>
-      <label for='femail'>E-mail</label> <br>
-      <input type='email' id='email' name='femail' class='form-field'> <br>
+      <label for='fname' id='lname'>Név</label> <span class="error-message" id="ne1">Név megadása közelező</span> <span
+        class="error-message" id="ne2">Név minimum 2 karakter hosszú</span><br>
+      <input type='text' id='name' name='fname' class='form-field' minlength='2'> <br>
+      <label for='femail' id='lemail'>E-mail</label> <span class="error-message" id="ee1">Email megadása közelező</span>
+      <span class="error-message" id="ee2">Email minimum 6 karakter hosszú</span> <span class="error-message"
+        id="ee3">Helytelen E-mail</span>
+      <br>
+      <input type='email' id='email' name='femail' class='form-field' minlength='6'> <br>
       <label for='gender'>Nem:</label> <br>
       <select id='gender' name='gender' class='gender-selector'>
         <option value='Nő'>Nő</option>
@@ -104,9 +109,11 @@
         <label for='waffles'>Gofri</label><br>
         <input type='radio' name='reggeli_vote' value='Francia pirítós' id='french_toast' class='breakfast-radio'>
         <label for='french_toast'>Francia pirítós</label><br>
+        <input type='radio' name='reggeli_vote' value='Egyik sem' id='egyik_sem' class='breakfast-radio' checked>
+        <label for='egyik_sem'>Egyik sem</label><br>
       </div>
 
-      <button>send</button>
+      <button id='send' type='button'>send</button>
     </form>
   </div>
 

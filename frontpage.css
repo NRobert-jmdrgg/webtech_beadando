@@ -1,5 +1,15 @@
 @import url(styles.css);
 
+.introduction,
+.requirements-container,
+.source-code {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--main-border-color);
+  border-radius: 25px;
+  background-color: var(--secondary-bg-color);
+}
+
 ul {
   list-style: url(./resources/tick_dark.png);
 }

@@ -1,5 +1,10 @@
 @import url(styles.css);
 
+#breakfast-logo {
+  width: 200px;
+  float: left;
+}
+
 .text-container,
 .form-container {
   margin: 3rem;

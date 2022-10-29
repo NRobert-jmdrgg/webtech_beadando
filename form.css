@@ -54,6 +54,30 @@ label {
   font-size: 24px;
 }
 
+input[type='text'],
+input[type='email'],
+select {
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+.error-message {
+  padding: 1rem;
+  font-size: 11px;
+  color: hsl(355, 76%, 59%);
+}
+
+input[type='date'],
+input[type='color'] {
+  padding: 0 1rem;
+  font-size: 24px;
+  margin: 1rem 0;
+  background-color: var(--main-bg-color);
+  border-radius: 25px;
+  color: var(--main-text-color);
+  border: solid 1px var(--main-border-color);
+}
+
 button {
   padding: 0 1rem;
   font-size: 24px;
@@ -62,10 +86,4 @@ button {
   background-color: var(--main-bg-color);
   border-radius: 25px;
   border: solid 1px var(--main-border-color);
-}
-
-.error-message {
-  padding: 1rem;
-  font-size: 11px;
-  color: hsl(355, 76%, 59%);
 }

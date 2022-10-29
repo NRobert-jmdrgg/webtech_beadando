@@ -1,0 +1,5 @@
+@import url(styles.css);
+
+ul {
+  list-style: url(./resources/tick_dark.png);
+}

@@ -9,8 +9,8 @@
   <meta name='author' content='Nagy Róbert'>
   <meta name='neptun' content='jmdrgg'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' href='./styles.css'>
   <link rel='stylesheet' href='./form.css'>
+  <link rel='stylesheet' href='./styles.css'>
   <!-- fonts -->
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 
@@ -84,24 +84,27 @@
   <div class='form-container'>
     <form>
       <label for='fname'>Név</label> <br>
-      <input type='text' id='name' name='fname'> <br>
+      <input type='text' id='name' name='fname' class='form-field'> <br>
       <label for='femail'>E-mail</label> <br>
-      <input type='email' id='email' name='femail'> <br>
+      <input type='email' id='email' name='femail' class='form-field'> <br>
       <label for='gender'>Nem:</label> <br>
-      <select id='gender' name='gender'>
+      <select id='gender' name='gender' class='gender-selector'>
         <option value='Nő'>Nő</option>
         <option value='Férfi'>Férfi</option>
         <option value='Enby'>Enby</option>
       </select> <br>
       <label for='reggeli_vote'>Kedvenc reggeli</label> <br>
-      <input type='radio' name='reggeli_vote' value='Amerikai palacsinta' id='pancake'>
-      <label for='pancake'>Amerikai palacsinta</label> <br>
-      <input type='radio' name='reggeli_vote' value='Palacsinta' id='crepes'>
-      <label for='crepes'>Palacsinta</label><br>
-      <input type='radio' name='reggeli_vote' value='Gofri' id='waffles'>
-      <label for='waffles'>Gofri</label><br>
-      <input type='radio' name='reggeli_vote' value='Francia pirítós' id='french_toast'>
-      <label for='french_toast'>Francia pirítós</label><br>
+      <div class='radio-buttons'>
+
+        <input type='radio' name='reggeli_vote' value='Amerikai palacsinta' id='pancake' class='breakfast-radio'>
+        <label for='pancake'>Amerikai palacsinta</label> <br>
+        <input type='radio' name='reggeli_vote' value='Palacsinta' id='crepes' class='breakfast-radio'>
+        <label for='crepes'>Palacsinta</label><br>
+        <input type='radio' name='reggeli_vote' value='Gofri' id='waffles' class='breakfast-radio'>
+        <label for='waffles'>Gofri</label><br>
+        <input type='radio' name='reggeli_vote' value='Francia pirítós' id='french_toast' class='breakfast-radio'>
+        <label for='french_toast'>Francia pirítós</label><br>
+      </div>
 
       <button>send</button>
     </form>

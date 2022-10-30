@@ -1,0 +1,39 @@
+@import url(styles.css);
+
+.comment-form {
+  display: inline-block;
+}
+
+.comment,
+.comment-form {
+  font-size: 24px;
+  margin: 1rem;
+  padding: 1rem;
+  border: solid 1px var(--main-border-color);
+  border-radius: 25px;
+  background-color: var(--secondary-bg-color);
+}
+
+#like {
+  float: left;
+}
+
+textarea {
+  padding: 0 1rem;
+  font-size: 24px;
+  margin: 1rem 0;
+  background-color: var(--main-bg-color);
+  border-radius: 25px;
+  color: var(--main-text-color);
+  border: solid 1px var(--main-border-color);
+}
+
+button {
+  padding: 0 1rem;
+  font-size: 24px;
+  margin: 1rem 0;
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+  border-radius: 25px;
+  border: solid 1px var(--main-border-color);
+}

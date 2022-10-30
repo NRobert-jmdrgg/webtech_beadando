@@ -9,17 +9,16 @@
   <meta name='author' content='Nagy Róbert'>
   <meta name='neptun' content='jmdrgg'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' href='./form.css'>
   <link rel='stylesheet' href='./styles.css'>
-  <!-- fonts -->
+  <link rel='stylesheet' href='./comments.css' <!-- fonts -->
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 
 
   <script src="./jquery-3.6.1.min.js" type="text/javascript"></script>
   <script src='./setTheme.js'></script>
+  <script src='./comments.js' defer></script>
   <script type="text/javascript" src="./index.js" defer></script>
-  <script type='text/javascript' src='bacon-ipsum.js' defer></script>
-  <script type='text/javascript' src='form.js'></script>
+
 </head>
 
 <body>
@@ -78,51 +77,27 @@
     </div>
   </div>
 
-  <div class='text-container'>
-    <img id='breakfast-logo' src='./resources/logo-breakfast.png'>
+
+
+  <div class='video' style='text-align: center;'>
+    <iframe width="734" height="413" src="https://www.youtube.com/embed/-1dSY6ZuXEY"
+      title="Spooky Scary Skeletons Original Song Video" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
   </div>
 
-  <div class='form-container'>
+  <div class='comment-form'>
     <form>
-      <label for='fname' id='lname'>Név</label> <span class="error-message" id="ne1">Név megadása közelező</span> <span
-        class="error-message" id="ne2">Név minimum 2 karakter hosszú</span><br>
-      <input type='text' id='name' name='fname' class='form-field' minlength='2'> <br>
-      <label for='femail' id='lemail'>E-mail</label> <span class="error-message" id="ee1">Email megadása közelező</span>
-      <span class="error-message" id="ee2">Email minimum 6 karakter hosszú</span> <span class="error-message"
-        id="ee3">Helytelen E-mail</span>
-      <br>
-      <input type='email' id='email' name='femail' class='form-field' minlength='6'> <br>
-      <label for='gender'>Nem:</label> <br>
-      <select id='gender' name='gender' class='gender-selector'>
-        <option value='Nő'>Nő</option>
-        <option value='Férfi'>Férfi</option>
-        <option value='Enby'>Enby</option>
-      </select> <br>
-      <label for='reggeli_vote'>Kedvenc reggeli</label> <br>
-      <div class='radio-buttons'>
-
-        <input type='radio' name='reggeli_vote' value='Amerikai palacsinta' id='pancake' class='breakfast-radio'>
-        <label for='pancake'>Amerikai palacsinta</label> <br>
-        <input type='radio' name='reggeli_vote' value='Palacsinta' id='crepes' class='breakfast-radio'>
-        <label for='crepes'>Palacsinta</label><br>
-        <input type='radio' name='reggeli_vote' value='Gofri' id='waffles' class='breakfast-radio'>
-        <label for='waffles'>Gofri</label><br>
-        <input type='radio' name='reggeli_vote' value='Francia pirítós' id='french_toast' class='breakfast-radio'>
-        <label for='french_toast'>Francia pirítós</label><br>
-        <input type='radio' name='reggeli_vote' value='Egyik sem' id='egyik_sem' class='breakfast-radio' checked>
-        <label for='egyik_sem'>Egyik sem</label><br>
-      </div>
-
-      <label for='datum'>Legutóbbi nap, amikor reggeliztem</label> <br>
-      <input type='date' name='reggeli_vote' id='datum'> <br>
-      <label for='szin_picker'>Kedvenc színem</label> <br>
-      <input type='color' name='reggeli_vote' id='szin_picker'> <br>
-      <label for='essay'>Esszé a döntésemről</label> <br>
-      <textarea name="essay" cols="40" rows="5"></textarea> <br>
-
-      <button id='send' type='button'>send</button> <br>
+      <label for='comment'>Komment:</label><br>
+      <textarea name='comment' rows='5' cols='120' id='new-comment'></textarea><br>
+      <button type='button' id='post'>Comment</button>
     </form>
   </div>
+  <div class='comments'>
+
+  </div>
+
+
 
   <div class='footer'>
     <table style='padding-top: 10px; padding-bottom: 10px; padding-left: 2cm;'>

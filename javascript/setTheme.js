@@ -28,10 +28,8 @@ if (!theme) {
     window.matchMedia &&
     window.matchMedia('(prefers-color-scheme: dark)').matches
   ) {
-    console.log('hello dark');
     theme = 'dark';
   } else {
-    console.log('hello light');
     theme = 'light';
   }
 }

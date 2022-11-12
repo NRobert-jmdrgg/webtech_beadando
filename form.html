@@ -9,74 +9,32 @@
   <meta name='author' content='Nagy Róbert'>
   <meta name='neptun' content='jmdrgg'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' href='./form.css'>
-  <link rel='stylesheet' href='./styles.css'>
+  <link rel='stylesheet' href='./css/form.css'>
+  <link rel='stylesheet' href='./css/styles.css'>
   <!-- fonts -->
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 
 
-  <script src="./jquery-3.6.1.min.js" type="text/javascript"></script>
-  <script src='./setTheme.js'></script>
-  <script type="text/javascript" src="./index.js" defer></script>
-  <script type='text/javascript' src='bacon-ipsum.js' defer></script>
-  <script type='text/javascript' src='form.js'></script>
+  <script src="./javascript/jquery-3.6.1.min.js"
+    type="text/javascript"></script>
+  <script>
+    <!-- load header and footer -->
+    $(function () {
+      $("#header").load("./header.html");
+      $("#footer").load("./footer.html");
+    });
+  </script>
+  <script src='./javascript/setTheme.js'></script>
+  <script type="text/javascript" src="./javascript/index.js" defer></script>
+  <script type='text/javascript' src='./javascript/bacon-ipsum.js'
+    defer></script>
+  <script type='text/javascript' src='./javascript/form.js'></script>
 </head>
 
 <body>
 
 
-  <div class='navbar'>
-    <a href='./index.html' style='text-decoration: none;'>
-      <div class='navbar-left'>
-        <img id='logo' src='' alt='weboldal logó' />
-        <span>Beadandó Feladat</span>
-      </div>
-    </a>
-    <div class='navbar-center'>
-      <div class='navbar-item'>
-        <span class='navbar-toggle' id='1'>Receptek</span>
-        <ol class='dropdown' id='1'>
-          <li><a href='./index.html'>Amerikai palacsinta</a></li>
-          <li><a href='./palacsinta.html'>Palacsinta</a></li>
-          <li><a href='./gofri.html'>Gofri</a></li>
-          <li><a href='./francia_piritos.html'>Francia Pirítós</a></li>
-        </ol>
-      </div>
-
-      <div class='navbar-item'>
-        <span class='navbar-toggle' id='2'>menu 2</span>
-        <ol class='dropdown' id='2'>
-          <li><a href=''>menu item 1</a></li>
-          <li><a href=''>menu item 2</a></li>
-          <li><a href=''>menu item 3</a></li>
-          <li><a href=''>menu item 4</a></li>
-        </ol>
-      </div>
-      <div class='navbar-item'>
-        <span class='navbar-toggle' id='3'>menu 3</span>
-        <ol class='dropdown' id='3'>
-          <li><a href=''>menu item 1</a></li>
-          <li><a href=''>menu item 2</a></li>
-          <li><a href=''>menu item 3</a></li>
-          <li><a href=''>menu item 4</a></li>
-        </ol>
-      </div>
-
-      <div class='navbar-item'>
-        <span class='navbar-toggle' id='4'>menu 4</span>
-        <ol class='dropdown' id='4'>
-          <li><a href=''>menu item 1</a></li>
-          <li><a href=''>menu item 2</a></li>
-          <li><a href=''>menu item 3</a></li>
-          <li><a href=''>menu item 4</a></li>
-        </ol>
-      </div>
-    </div>
-
-    <div class='dark-mode-switcher-container'>
-      <img id='dark-mode-switcher' src='' alt='téma választó' />
-    </div>
-  </div>
+  <div id='header'></div>
 
   <div class='text-container'>
     <img id='breakfast-logo' src='./resources/logo-breakfast.png'>
@@ -84,14 +42,19 @@
 
   <div class='form-container'>
     <form>
-      <label for='fname' id='lname'>Név</label> <span class="error-message" id="ne1">Név megadása közelező</span> <span
-        class="error-message" id="ne2">Név minimum 2 karakter hosszú</span><br>
-      <input type='text' id='name' name='fname' class='form-field' minlength='2'> <br>
-      <label for='femail' id='lemail'>E-mail</label> <span class="error-message" id="ee1">Email megadása közelező</span>
-      <span class="error-message" id="ee2">Email minimum 6 karakter hosszú</span> <span class="error-message"
-        id="ee3">Helytelen E-mail</span>
+      <label for='fname' id='lname'>Név</label> <span class="error-message"
+        id="ne1">Név megadása közelező</span> <span class="error-message"
+        id="ne2">Név minimum 2 karakter hosszú</span><br>
+      <input type='text' id='name' name='fname' class='form-field'
+        minlength='2'> <br>
+      <label for='femail' id='lemail'>E-mail</label> <span class="error-message"
+        id="ee1">Email megadása közelező</span>
+      <span class="error-message" id="ee2">Email minimum 6 karakter
+        hosszú</span> <span class="error-message" id="ee3">Helytelen
+        E-mail</span>
       <br>
-      <input type='email' id='email' name='femail' class='form-field' minlength='6'> <br>
+      <input type='email' id='email' name='femail' class='form-field'
+        minlength='6'> <br>
       <label for='gender'>Nem:</label> <br>
       <select id='gender' name='gender' class='gender-selector'>
         <option value='Nő'>Nő</option>
@@ -101,15 +64,20 @@
       <label for='reggeli_vote'>Kedvenc reggeli</label> <br>
       <div class='radio-buttons'>
 
-        <input type='radio' name='reggeli_vote' value='Amerikai palacsinta' id='pancake' class='breakfast-radio'>
+        <input type='radio' name='reggeli_vote' value='Amerikai palacsinta'
+          id='pancake' class='breakfast-radio'>
         <label for='pancake'>Amerikai palacsinta</label> <br>
-        <input type='radio' name='reggeli_vote' value='Palacsinta' id='crepes' class='breakfast-radio'>
+        <input type='radio' name='reggeli_vote' value='Palacsinta' id='crepes'
+          class='breakfast-radio'>
         <label for='crepes'>Palacsinta</label><br>
-        <input type='radio' name='reggeli_vote' value='Gofri' id='waffles' class='breakfast-radio'>
+        <input type='radio' name='reggeli_vote' value='Gofri' id='waffles'
+          class='breakfast-radio'>
         <label for='waffles'>Gofri</label><br>
-        <input type='radio' name='reggeli_vote' value='Francia pirítós' id='french_toast' class='breakfast-radio'>
+        <input type='radio' name='reggeli_vote' value='Francia pirítós'
+          id='french_toast' class='breakfast-radio'>
         <label for='french_toast'>Francia pirítós</label><br>
-        <input type='radio' name='reggeli_vote' value='Egyik sem' id='egyik_sem' class='breakfast-radio' checked>
+        <input type='radio' name='reggeli_vote' value='Egyik sem' id='egyik_sem'
+          class='breakfast-radio' checked>
         <label for='egyik_sem'>Egyik sem</label><br>
       </div>
 
@@ -124,26 +92,7 @@
     </form>
   </div>
 
-  <div class='footer'>
-    <table style='padding-top: 10px; padding-bottom: 10px; padding-left: 2cm;'>
-
-      <tr>
-        <th colspan='3'>© 2022 Nagy Róbert - All rights reserved</th>
-      </tr>
-
-      <tr>
-        <td><a href='https://imgs.xkcd.com/comics/faust_20.png'>Terms of service</a>
-        </td>
-        <td><a href='https://imgs.xkcd.com/comics/privacy_opinions.png'>Privacy Policy</a></td>
-        <td><a href='https://imgs.xkcd.com/comics/unsubscribe_message.png'>Newsletters</a></td>
-      </tr>
-
-    </table>
-    <p style='margin-left: auto; padding-top: 10px; padding-bottom: 10px; padding-right: 2cm;'>
-      Made in Miskolc 🔪
-    </p>
-  </div>
-
+  <div id='footer'></div>
 
 </body>
 

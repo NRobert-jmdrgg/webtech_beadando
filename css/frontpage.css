@@ -3,13 +3,34 @@
 .introduction,
 .requirements-container,
 .source-code {
-  margin: 1rem;
-  padding: 1rem;
+  padding: 2rem;
+  margin: 2rem;
   border: 1px solid var(--main-border-color);
   border-radius: 25px;
   background-color: var(--secondary-bg-color);
 }
 
-ul {
+.requirements-container {
+  display: flex;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  margin-left: 3rem;
+}
+
+.requirements {
+  padding: 2rem;
+  margin: 2rem;
+  list-style: url(../resources/tick_dark.png);
+}
+
+.requirements-nested {
+  padding: 0 1rem;
+  margin: 0 1rem;
   list-style: url(../resources/tick_dark.png);
 }

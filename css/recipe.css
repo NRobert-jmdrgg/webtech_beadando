@@ -1,0 +1,26 @@
+.recipe {
+  margin-left: 2cm;
+  margin-right: 2cm;
+}
+
+.ingredients img {
+  border: solid 1px var(--main-border-color);
+}
+
+h1,
+.ido {
+  margin-left: 3rem;
+}
+
+.recipe li {
+  font-size: 24px;
+}
+
+.recipe div {
+  margin-top: 1cm;
+  margin-bottom: 1cm;
+  padding: 1cm;
+  border-radius: 25px;
+  border: solid 1px var(--main-border-color);
+  background-color: var(--secondary-bg-color);
+}

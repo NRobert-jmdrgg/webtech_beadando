@@ -2,6 +2,10 @@ function setDarkThemeImages() {
   $('#dark-mode-switcher').attr('src', './resources/dark_mode.png');
   $('#logo').attr('src', './resources/logo_dark.png');
   $('.requirements').css('list-style', 'url("./resources/tick_dark.png")');
+  $('.requirements-nested').css(
+    'list-style',
+    'url("./resources/tick_dark.png")'
+  );
   $('#breakfast-logo').attr('src', './resources/logo-breakfast-dark.png');
 }
 
@@ -9,6 +13,7 @@ function setLightThemeImages() {
   $('#dark-mode-switcher').attr('src', './resources/light_mode.png');
   $('#logo').attr('src', './resources/logo.png');
   $('.requirements').css('list-style', 'url("./resources/tick.png")');
+  $('.requirements-nested').css('list-style', 'url("./resources/tick.png")');
   $('#breakfast-logo').attr('src', './resources/logo-breakfast.png');
 }
 
